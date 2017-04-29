@@ -39,7 +39,6 @@ RUN cd /src && go build -o app
 FROM alpine
 WORKDIR /app
 COPY --from=build-env /src/app /app/
-EXPOSE 80
 ENTRYPOINT ./app
 ```
 
